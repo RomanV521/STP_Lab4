@@ -48,6 +48,12 @@ class Seller {
         return price;
     }
 
+<<<<<<< HEAD
+=======
+    public Seller() {
+    }
+
+>>>>>>> origin/master
     public void setPrice(double price) {
         if (price>0) {
             this.price = price;
@@ -61,4 +67,18 @@ class Seller {
     public void setSaleDate(Date saleDate) {
         this.saleDate = saleDate;
     }
+<<<<<<< HEAD
+=======
+
+    @Override
+    public String toString() {
+        return "Seller{" +
+                "name='" + name + '\'' +
+                ", productName='" + productName + '\'' +
+                ", count=" + count +
+                ", price=" + price +
+                ", saleDate=" + saleDate +
+                '}';
+    }
+>>>>>>> origin/master
 }
