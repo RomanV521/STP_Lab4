@@ -34,8 +34,6 @@ public class Main {
         Seller seller3 = new Seller("Петров", "Морковь", 6, 19.3, LocalDate.of(2021, 9, 3));
 
         String nameSeller="Иванов";
-//        double maxPrice = 0;
-//        int numProduct = 0;
 
         Sellers sellers = new Sellers(3);
         sellers.addSeller(seller1);
@@ -44,21 +42,6 @@ public class Main {
 
         sellers.findSellsByName(nameSeller);
         System.out.println(sellers.maxPriceProduct(nameSeller));
-
-
-//        Seller maxPriceSeller = new Seller();
-//        for (int i = 0; i < sellers.length; i++) {
-//            if (sellers[i].getName().equalsIgnoreCase("Иванов")) {
-//                if (sellers[i].getPrice() > maxPrice) {
-//                    maxPrice = sellers[i].getPrice();
-//                    maxPriceSeller = sellers[i];
-//                }
-//                numProduct += sellers[i].getCount();
-//                System.out.println(sellers[i]);
-//            }
-//        }
-//        System.out.println("Общее количество товаров проданые продавцом: "+ numProduct+"\n");
-//        System.out.println("Самый дорогой товар : \n"+ maxPriceSeller);
     }
 
     /**
@@ -91,6 +74,6 @@ public class Main {
     public static void main(String[] args) {
         Start();
         task1();
-//        task2();
+        task2();
     }
 }
