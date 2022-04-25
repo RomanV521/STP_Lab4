@@ -95,6 +95,6 @@ class Seller {
                 "\n\tПродал: " + getProductName() +
                 "\n\tКол-во: " + getCount() + "шт" +
                 "\n\tСумма: " + getPrice() +
-                "\n\tДата: " + getSaleDate().format(DateTimeFormatter.ISO_DATE) + "\n";
+                "\n\tДата: " + getSaleDate();//.format(DateTimeFormatter.ISO_DATE) + "\n";
     }
 }

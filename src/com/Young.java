@@ -1,6 +1,7 @@
 package com;
 
 import java.time.LocalDate;
+import java.util.Locale;
 
 public class Young {
     private String name;
@@ -30,19 +31,14 @@ public class Young {
         this.name = name.strip();
 
         for (int i = 0; i < this.name.length(); i++) {
-            if (!Character.isAlphabetic(this.name.charAt(i)) || this.name.charAt(i)=='-'){
+            if (!Character.isAlphabetic(this.name.charAt(i)) || this.name.charAt(i) == '-') {
                 return;
             }
         }
-        String firstPart = this.name.substring(0,1);
+        String firstPart = this.name.substring(0, 1).toUpperCase();
 
-        String upperCaseChar = this.name.toUpperCase();
-        if (firstPart.equals(upperCaseChar)){
-            String lastPart = this.name.substring(1);
-            if (lastPart.equals(lastPart.toLowerCase())){
-                this.name=name;
-            }
-        }
+        String lastPart = this.name.substring(1).toLowerCase(Locale.ROOT);
+        this.name = firstPart + lastPart;
     }
 
     public String getSurname() {
@@ -51,20 +47,16 @@ public class Young {
 
     public void setSurname(String surname) {
         this.surname = surname.strip();
+
         for (int i = 0; i < this.surname.length(); i++) {
-            if (!Character.isAlphabetic(this.surname.charAt(i)) || this.surname.charAt(i)=='-'){
+            if (!Character.isAlphabetic(this.surname.charAt(i)) || this.surname.charAt(i) == '-') {
                 return;
             }
         }
-        String firstPart = this.surname.substring(0,1);
+        String firstPart = this.surname.substring(0, 1).toUpperCase();
 
-        String upperCaseChar = this.surname.toUpperCase();
-        if (firstPart.equals(upperCaseChar)){
-            String lastPart = this.surname.substring(1);
-            if (lastPart.equals(lastPart.toLowerCase())){
-                this.surname=surname;
-            }
-        }
+        String lastPart = this.surname.substring(1).toLowerCase(Locale.ROOT);
+        this.surname = firstPart + lastPart;
     }
 
     public String getOtchestvo() {
@@ -73,20 +65,16 @@ public class Young {
 
     public void setOtchestvo(String otchestvo) {
         this.otchestvo = otchestvo.strip();
+
         for (int i = 0; i < this.otchestvo.length(); i++) {
-            if (!Character.isAlphabetic(this.otchestvo.charAt(i)) || this.otchestvo.charAt(i)=='-'){
+            if (!Character.isAlphabetic(this.otchestvo.charAt(i)) || this.otchestvo.charAt(i) == '-') {
                 return;
             }
         }
-        String firstPart = this.otchestvo.substring(0,1);
+        String firstPart = this.otchestvo.substring(0, 1).toUpperCase();
 
-        String upperCaseChar = this.otchestvo.toUpperCase();
-        if (firstPart.equals(upperCaseChar)){
-            String lastPart = this.otchestvo.substring(1);
-            if (lastPart.equals(lastPart.toLowerCase())){
-                this.otchestvo=otchestvo;
-            }
-        }
+        String lastPart = this.otchestvo.substring(1).toLowerCase(Locale.ROOT);
+        this.otchestvo = firstPart + lastPart;
     }
 
     public String getPosition() {
